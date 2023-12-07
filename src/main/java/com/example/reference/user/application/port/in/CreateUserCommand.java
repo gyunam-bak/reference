@@ -5,12 +5,12 @@ import lombok.Getter;
 
 @Getter
 public class CreateUserCommand {
-    private String email;
-    private String password;
-    private String name;
-    private String phone;
+    private final String email;
+    private final String password;
+    private final String name;
+    private final String phone;
 
-    public CreateUserCommand(CreateUserRequest request) {
+    private CreateUserCommand(CreateUserRequest request) {
         this.email = request.getEmail();
         this.password = request.getPassword();
         this.name = request.getName();

@@ -23,7 +23,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<CommonRestResponse<UserDto>> createUser(
             @RequestBody CreateUserRequest request
-            ) {
+    ) {
         try {
             User createdUser = createUserUseCase.createUser(CreateUserCommand.fromRequest(request));
 

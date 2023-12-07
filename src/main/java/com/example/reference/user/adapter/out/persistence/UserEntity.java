@@ -1,10 +1,7 @@
 package com.example.reference.user.adapter.out.persistence;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Builder
 @Getter
@@ -18,6 +15,7 @@ public class UserEntity {
 
     @Column(unique = true, nullable = false)
     private String email;
+
     private String password;
     private String name;
     private String phone;
