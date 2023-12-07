@@ -54,6 +54,12 @@ public class UserService implements CreateUserUseCase, UpdateUserUseCase, Delete
 
     @Override
     public void deleteUser(Long id) {
+        User user = loadUserPort.loadUser(id);
+
+        if (user == null) {
+            throw new EntityNotFoundException("User not found.");
+        }
+
         deleteUserPort.deleteUser(id);
     };
 }

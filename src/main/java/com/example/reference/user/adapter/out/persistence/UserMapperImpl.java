@@ -4,7 +4,7 @@ import com.example.reference.user.domain.User;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MapperImpl implements Mapper {
+public class UserMapperImpl implements UserMapper {
     @Override
     public UserEntity createUserToEntity (User user) {
         return UserEntity.builder()
